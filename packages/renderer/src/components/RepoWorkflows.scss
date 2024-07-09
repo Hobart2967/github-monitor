@@ -1,0 +1,72 @@
+.repo-workflows {
+  width: 100%;
+
+  .branch-name {
+    min-height: 25px;
+    min-width: 55px;
+
+    background: white;
+    border-top: 1px solid #dedede;
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: -3px;
+    padding: 2px 2px 4px 2px;
+    text-align: center;
+
+    &--success {
+      background-color: #bfe8a5;
+    }
+
+    &--failure {
+      background-color: #ffb9b5;
+    }
+
+    &--checking {
+      background-color: #ffe3a9;
+    }
+  }
+
+  .workflow-chart {
+    height: 25px;
+    align-items: baseline;
+    border: 1px solid #dedede;
+    padding: 8px;
+    box-sizing: border-box;
+    min-height: 43px;
+    min-width: 55px;
+    border-radius: 6px;
+    background: white;
+
+    &__bar {
+      width: 5px;
+      background-color: grey;
+      height: 100%;
+
+      &--success {
+        background-color: #1a7f37;
+      }
+
+      &--in-progress {
+        background-color: #9a6700;
+      }
+
+      &--failure {
+        background-color: #d1242f;
+      }
+
+      &--skeleton {
+        animation: skeleton-loading 1s linear infinite alternate;
+
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            height: #{random(100) + '%'};
+          }
+        }
+      }
+
+    }
+  }
+}

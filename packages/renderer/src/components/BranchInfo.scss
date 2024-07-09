@@ -1,0 +1,28 @@
+.kpi-info {
+  padding: 3px 6px;
+  border: 1px #dedede solid;
+  border-radius: 6px;
+  background: white;
+  align-items: center;
+
+  &--merged {
+    border-color: #8250df;
+    background-color: rgba(#8250df, 0.01);
+    svg {
+      fill: #8250df;
+    }
+  }
+
+  &--open {
+    border-color: #9a6700;
+    background-color: rgba(#9a6700, 0.1);
+    svg {
+      fill: #9a6700;
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}

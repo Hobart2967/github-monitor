@@ -1,0 +1,15 @@
+.home {
+
+  &__action-bar {
+    flex: 1;
+    align-items: end;
+    justify-content: end;
+    padding: 16px;
+  }
+
+  &__repo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
